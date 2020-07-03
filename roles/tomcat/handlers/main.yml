@@ -1,0 +1,4 @@
+---
+- name: start_tomcat
+  shell: nohup /opt/apache-tomcat-9.0.31/bin/startup.sh
+

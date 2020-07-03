@@ -1,0 +1,6 @@
+---
+- hots: all
+  become: true
+  roles:
+  - tomcat
+~                

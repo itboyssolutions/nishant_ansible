@@ -1,0 +1,7 @@
+---
+- name: set java path in /etc/env
+  blockinfile:
+    path: /etc/profile
+    block: |
+      PATH=$PATH:$JAVA_HOME:$HOME/bin
+      export PATH

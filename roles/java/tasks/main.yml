@@ -1,0 +1,4 @@
+---
+# tasks file for java
+- include_tasks: pkg.yml
+- include_tasks: path.yml

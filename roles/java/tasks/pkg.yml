@@ -1,0 +1,6 @@
+---
+# tasks file for java
+- name: install open-jdk
+  yum: name=java state=present
+  notify:
+  - source
