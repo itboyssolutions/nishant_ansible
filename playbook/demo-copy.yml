@@ -1,0 +1,12 @@
+---
+ - hosts: tomcat
+   become: true
+   tasks:
+     - name: This command will backup existing ROOT.war to one step back for rollback purpose.
+       shell:
+         cmd: cp /opt/apache-tomcat-9.0.35/webapps/ROOT.war /opt/apache-tomcat-9.0.35/rollback-ROOT.war
+     
+     - name: copy file to tomcat
+       copy: 
+         src: /opt/playbooks/demo/target/ROOT.war
+         dest: /opt/apache-tomcat-9.0.35/webapps
